@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">NutriSol</string>
+    <string name="title_activity_home_page">HomePage</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="Homepage_Name">NutriSol</string>
+    <string-array name="SpinnerwtItems">
+        <item>kgs</item>
+        <item>lbs</item>
+    </string-array>
+    <string-array name="SpinnerhtItems">
+        <item>cm</item>
+        <item>in</item>
+    </string-array>
+    <string-array name="SpinnerBreakfast1Items">
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+    </string-array>
+    <string name="Nutri"><u>Nutritional Values</u></string>
+</resources>

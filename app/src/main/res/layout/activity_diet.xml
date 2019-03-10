@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DietActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:text="Diet Chart"
+            android:textColor="#ffffff"
+            android:textSize="25dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="5dp"
+            android:onClick="resetDiet"
+            android:background="@drawable/ic_refresh_black_24dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Select your Meal:"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15dp"
+            />
+
+
+        <Spinner
+            android:id="@+id/spinnerBreakfast1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="7dp">
+
+        </Spinner>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food Item(1):"
+            android:padding="5dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15dp"/>
+
+        <EditText
+            android:id="@+id/fooditem1"
+            android:layout_width="209dp"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/fooditemBtn1"
+            android:onClick="onFooditem1Clicked"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@color/colorPrimary"
+            android:src="@drawable/ic_subdirectory_arrow_left_black_24dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food Item(2):"
+            android:layout_marginLeft="15dp"
+            android:padding="5dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15dp"/>
+
+        <EditText
+            android:id="@+id/fooditem2"
+            android:layout_width="209dp"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/fooditemBtn2"
+            android:onClick="onFooditem2Clicked"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@color/colorPrimary"
+            android:src="@drawable/ic_subdirectory_arrow_left_black_24dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food Item(3):"
+            android:padding="5dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15dp"/>
+
+        <EditText
+            android:id="@+id/fooditem3"
+            android:layout_width="209dp"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/fooditemBtn3"
+            android:onClick="onFooditem3Clicked"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@color/colorPrimary"
+            android:src="@drawable/ic_subdirectory_arrow_left_black_24dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food Item(4):"
+            android:padding="5dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15dp"/>
+
+        <EditText
+            android:id="@+id/fooditem4"
+            android:layout_width="209dp"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/fooditemBtn4"
+            android:onClick="onFooditem4Clicked"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@color/colorPrimary"
+            android:src="@drawable/ic_subdirectory_arrow_left_black_24dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food Item(5):"
+            android:padding="5dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15dp"/>
+
+        <EditText
+            android:id="@+id/fooditem5"
+            android:layout_width="209dp"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/fooditemBtn5"
+            android:onClick="onFooditem5Clicked"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@color/colorPrimary"
+            android:src="@drawable/ic_subdirectory_arrow_left_black_24dp" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/calculateBreakfast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_back"
+        android:onClick="calculateMeal"
+        android:text="Calculate"
+        android:textColor="#ffffff" />
+
+    <LinearLayout
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:padding="5dp"
+            android:text="Result"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/breakfastCalories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:padding="5dp"
+            android:textColor="@color/colorPrimary"
+            android:text="Calories(in Kcal):"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/mealCaloriesKcal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:padding="5dp"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/getNutrients"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Add more key words for better search result,\neg, one bowl of rice,two glass of milk,a cup of coffee;\nsmall, medium or large for quantity.\nEx -one small cup of milk ." />
+
+
+</LinearLayout>
