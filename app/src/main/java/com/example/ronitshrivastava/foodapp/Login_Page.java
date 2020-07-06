@@ -18,6 +18,7 @@ public class Login_Page extends AppCompatActivity {
     DatabaseHelper db;
     Button loginButton;
     String bundleEmailAddress,bundleName;
+    Bundle extras;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +28,7 @@ public class Login_Page extends AppCompatActivity {
         LoginPassword = (EditText)findViewById(R.id.LoginPassword);
         db = new DatabaseHelper(this);
         loginButton = (Button)findViewById(R.id.LoginButton);
-        Bundle extras = getIntent().getExtras();
+        extras = getIntent().getExtras();
         if (extras != null) {
             bundleEmailAddress = extras.getString("emailAddress");
             bundleName=extras.getString("name");
@@ -67,6 +68,8 @@ public class Login_Page extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         //super.onBackPressed();
+        if(extras.getBoolean("isLoggedIn")==false)
+            startActivity(new Intent(Login_Page.this, SplashActivity.class));
         moveTaskToBack(true);
         android.os.Process.killProcess(android.os.Process.myPid());
         System.exit(1);

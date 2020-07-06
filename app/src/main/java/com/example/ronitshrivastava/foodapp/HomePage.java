@@ -89,6 +89,7 @@ public class HomePage extends AppCompatActivity
             drawer.closeDrawer(GravityCompat.START);
         } else {
             //super.onBackPressed();
+            startActivity(new Intent(HomePage.this, SplashActivity.class));
             moveTaskToBack(true);
             android.os.Process.killProcess(android.os.Process.myPid());
             System.exit(1);
@@ -118,6 +119,7 @@ public class HomePage extends AppCompatActivity
             editor.clear();
             editor.commit();
             Intent i = new Intent(HomePage.this,Login_Page.class);
+            i.putExtra("isLoggedIn",false);
             startActivity(i);
             //return true;
         }
