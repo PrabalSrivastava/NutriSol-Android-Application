@@ -46,7 +46,7 @@ public class Login_Page extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Successfully Logged In", Toast.LENGTH_SHORT).show();
 
                     //shared preferences
-                    final SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(Login_Page.this);
+                    final SharedPreferences sharedPref = getSharedPreferences("MY_SHARED_PREF",MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedPref.edit();
                     editor.putBoolean("LoggedIn", true);
                     editor.putString("Email", email);

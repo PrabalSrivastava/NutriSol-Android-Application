@@ -112,7 +112,7 @@ public class HomePage extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.logout) {
-            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(HomePage.this);
+            SharedPreferences preferences = getSharedPreferences("MY_SHARED_PREF",MODE_PRIVATE);
             SharedPreferences.Editor editor = preferences.edit();
             editor.remove("emailAddress");
             editor.remove("name");
