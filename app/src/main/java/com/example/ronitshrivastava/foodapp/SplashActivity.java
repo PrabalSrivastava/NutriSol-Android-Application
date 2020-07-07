@@ -18,6 +18,7 @@ public class SplashActivity extends AppCompatActivity {
         //final SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         final SharedPreferences sharedPref = getSharedPreferences("MY_SHARED_PREF",MODE_PRIVATE);
         Registered = sharedPref.getBoolean("LoggedIn", false);
+        //Access email and password, get uname and pass them to both activity
 
         if (!Registered)
         {
