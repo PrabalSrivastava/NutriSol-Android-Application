@@ -25,8 +25,8 @@ import android.widget.Toast;
 
 public class HomePage extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    TextView name;
-    TextView emailAddress;
+    TextView name1;
+    TextView emailAddress1;
     LinearLayout profile;
     String valueEmailAddress, valueName;
 
@@ -69,7 +69,8 @@ public class HomePage extends AppCompatActivity
 
 
         //Bundle
-        Bundle extras = getIntent().getExtras();
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
         if (extras != null) {
             valueEmailAddress = extras.getString("emailAddress");
             //emailAddress.setText(valueEmailAddress);
@@ -80,6 +81,15 @@ public class HomePage extends AppCompatActivity
             //The key argument here must match that used in the other activity
             //Toast.makeText(this, ""+value, Toast.LENGTH_SHORT).show();
         }
+        View header = navigationView.getHeaderView(0);
+        //nameTextView = (TextView) header.findViewById(R.id.nameTextView);
+        //mNameTextView.setText("XYZ");
+        name1=(TextView)header.findViewById(R.id.name);
+        name1.setText(valueName);
+
+        emailAddress1=(TextView)header.findViewById(R.id.emailAddress);
+        emailAddress1.setText(valueEmailAddress);
+
     }
 
     @Override

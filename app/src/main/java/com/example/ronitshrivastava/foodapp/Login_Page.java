@@ -18,7 +18,7 @@ public class Login_Page extends AppCompatActivity {
     DatabaseHelper db;
     Button loginButton;
     String bundleEmailAddress,bundleName;
-    Bundle extras;
+    Bundle extras,extras1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +29,9 @@ public class Login_Page extends AppCompatActivity {
         db = new DatabaseHelper(this);
         loginButton = (Button)findViewById(R.id.LoginButton);
         extras = getIntent().getExtras();
-        if (extras != null) {
+        if(extras!=null) {
             bundleEmailAddress = extras.getString("emailAddress");
-            bundleName=extras.getString("name");
+            bundleName = extras.getString("name");
             //The key argument here must match that used in the other activity
             //Toast.makeText(this, ""+value, Toast.LENGTH_SHORT).show();
         }
@@ -42,9 +42,10 @@ public class Login_Page extends AppCompatActivity {
                 String email = LoginEmail.getText().toString();
                 String password = LoginPassword.getText().toString();
                 Boolean chkemailpass = db.chkemailpassword(email, password);
+
                 if(chkemailpass) {
                     Toast.makeText(getApplicationContext(), "Successfully Logged In", Toast.LENGTH_SHORT).show();
-
+                    String username = db.getUsername(email,password);
                     //shared preferences
                     final SharedPreferences sharedPref = getSharedPreferences("MY_SHARED_PREF",MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedPref.edit();
@@ -54,9 +55,12 @@ public class Login_Page extends AppCompatActivity {
                     editor.apply();
 
                     //bundle
+
+                    extras1 = new Bundle();
+                    extras1.putString("name",username);
+                    extras1.putString("emailAddress",email);
                     Intent i = new Intent(Login_Page.this, HomePage.class);
-                    i.putExtra("name",bundleName);
-                    i.putExtra("emailAddress",bundleEmailAddress);
+                    i.putExtras(extras1);
                     startActivity(i);
                 }
                 else

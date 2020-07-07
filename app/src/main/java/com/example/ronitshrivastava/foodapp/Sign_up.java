@@ -85,7 +85,8 @@ public class Sign_up extends AppCompatActivity {
                     Boolean chkemail = db.chkemail(mSignupEmail.getEditText().getText().toString());
                     if (chkemail)
                     {
-                        Boolean insert = db.insert(mSignupEmail.getEditText().getText().toString().trim(), mSignupPassword.getEditText().getText().toString());
+                        Boolean insert = db.insert(mSignupEmail.getEditText().getText().toString().trim(), mSignupPassword.getEditText().getText().toString(),
+                                mSignupName.getEditText().getText().toString());
                         if (insert == true) {
                             Toast.makeText(this, "Registered Successfully", Toast.LENGTH_SHORT).show();
                             //String value="Hello world";
